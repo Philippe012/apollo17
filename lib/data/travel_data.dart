@@ -4,8 +4,8 @@ class TravelData {
   static final List<Destination> destinations = [
     Destination(
       id: 1,
-      name: "Bali, Indonesia",
-      location: "Asia",
+      name: "Kigali, Rwanda",
+      location: "Africa",
       price: "\$1,200",
       rating: 4.8,
       image: "assets/images/bali.jpg",

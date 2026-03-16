@@ -7,11 +7,11 @@ class CustomButton extends StatelessWidget {
   final bool isOutlined;
 
   const CustomButton({
-    super.key,
+    Key? key,
     required this.text,
     required this.onPressed,
     this.isOutlined = false,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +21,17 @@ class CustomButton extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: isOutlined
             ? null
-            : LinearGradient(
-                colors: [AppColors.primary, AppColors.secondary],
-              ),
+            : const LinearGradient(colors: [AppColors.primary, AppColors.secondary]), // Added 'const' here
         borderRadius: BorderRadius.circular(12),
         border: isOutlined
             ? Border.all(color: AppColors.primary, width: 2)
             : null,
         boxShadow: [
           BoxShadow(
-            color: AppColors.primary.withValues(alpha: 0.3), // ✅ fixed
+            color: AppColors.primary.withValues(alpha: 77), // Replaced 'withOpacity' with 'withValues'
             blurRadius: 8,
             offset: const Offset(0, 4),
-          ),
+          )
         ],
       ),
       child: Material(
@@ -45,9 +43,7 @@ class CustomButton extends StatelessWidget {
             child: Text(
               text,
               style: TextStyle(
-                color: isOutlined
-                    ? AppColors.primary
-                    : AppColors.white,
+                color: isOutlined ? AppColors.primary : AppColors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),

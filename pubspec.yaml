@@ -1,30 +1,25 @@
-name: hello_world
-description: "A new Flutter project."
-
-publish_to: 'none' 
+name: travel_app_lab
+description: A Flutter Travel App UI Lab.
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.8.1
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.8
-  provider: ^6.0.0
+  cupertino_icons: ^1.0.2
+  provider: ^6.1.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^2.0.0
 
-  flutter_lints: ^5.0.0
-
-
-# The following section is specific to Flutter packages.
 flutter:
-
   uses-material-design: true
-  
+
+  # Register your images here
   assets:
     - assets/images/
